@@ -21,7 +21,7 @@ class config(object):
         self.label = 'rock'
 
         # 0: 左手  1: 右手 2:双手 请保证单手和双手分别录制视频
-        self.mode = 0
+        self.mode = 2
 
         # 下面的参数不用改
         self.name_dict = ['_shitou',
@@ -39,7 +39,8 @@ class config(object):
                           '_shizhi']
         self.color_map = [(255, 0, 0), (0, 0, 255)]
 
-        self.video_path = 'Homemade_Hand/' + self.label + '.avi'
+        # self.video_path = 'Homemade_Hand/' + self.label + '.avi'
+        self.video_path = 'Homemade_Hand/' + self.label + '.mov'
         self.save_path = 'Homemade_Hand/_' + self.label + '/'
         self.boxes_path = 'Homemade_Hand/_' + self.label + '/' + self.label + '_boxes.pickle'
 

@@ -15,7 +15,6 @@ out = cv2.VideoWriter(args.video_path, fourcc, 10, size)
 print('saving to %s' % args.video_path)
 print('Are you Ready!')
 
-
 start = 0
 im_width, im_height = int(cap.get(3)), int(cap.get(4))
 

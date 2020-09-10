@@ -24,13 +24,12 @@ if __name__ == '__main__':
 
     im_width, im_height = int(cap.get(3)), int(cap.get(4))
 
-    # mode : 0,1-单手 2-双手
+    # mode : 0-左手, 1-右手, 2-双手
     num_hands_detect = 1
     if args.mode == 2:
         num_hands_detect = 2
 
     cv2.namedWindow('Window', cv2.WINDOW_NORMAL)
-
 
     if os.path.exists(args.boxes_path):
         with open(args.boxes_path, 'rb') as f:
