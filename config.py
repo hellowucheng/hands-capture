@@ -40,7 +40,7 @@ class config(object):
         self.color_map = [(255, 0, 0), (0, 0, 255)]
 
         # self.video_path = 'Homemade_Hand/' + self.label + '.avi'
-        self.video_path = 'Homemade_Hand/' + self.label + '.mov'
+        self.video_path = 'Homemade_Hand/' + self.label + '.mp4'
         self.save_path = 'Homemade_Hand/_' + self.label + '/'
         self.boxes_path = 'Homemade_Hand/_' + self.label + '/' + self.label + '_boxes.pickle'
 

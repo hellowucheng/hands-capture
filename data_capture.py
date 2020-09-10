@@ -48,7 +48,7 @@ if __name__ == '__main__':
     whichhand = 0
     while cap.isOpened():
         ret, image_np = cap.read()
-
+        image_np = cv2.flip(image_np, 0);
         # 使用上一帧的检测框作为当前帧的初始框,再进行微调
         left, top, right, bottom = [int(i) for i in final_boxes[whichhand]]
         while True:
@@ -64,7 +64,8 @@ if __name__ == '__main__':
                 path = args.save_path + id + '.jpg'
 
                 print('-----------------------------------')
-                print('save as' + path)
+                print('save as', path)
+                print('box coordinate: ', final_boxes)
                 cv2.imwrite(path, image_np)
                 print('-----------------------------------')
 
@@ -72,7 +73,7 @@ if __name__ == '__main__':
                 with open(args.boxes_path, 'wb') as f:
                     pickle.dump(boxes_dict, f)
                 break
-            # 跳到下一帧
+            # 空格 跳到下一帧
             elif press(flag, 32):
                 break
             # 上移
